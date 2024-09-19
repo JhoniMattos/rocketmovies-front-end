@@ -7,7 +7,7 @@
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
-<img src="./src/assets/capa.png" alt="foto de capa"> 
+<img witdh="50px" src="./src/assets/capa.png" alt="foto de capa"> 
 
 ## 🚀 Tecnologias
 
