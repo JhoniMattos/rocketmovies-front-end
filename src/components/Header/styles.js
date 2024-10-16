@@ -14,6 +14,7 @@ export const Container = styled.header`
   display: flex;
 
   padding: 0 64px;
+  cursor: default;
 `;
 
 export const Profile = styled(Link)`
@@ -33,6 +34,8 @@ export const Profile = styled(Link)`
     line-height: 24px;
 
     gap: 16px;
+    
+    cursor: default;
   }  
 
   h1 { 
@@ -54,12 +57,12 @@ export const Profile = styled(Link)`
 
   a {
     white-space: nowrap;
-    color: ${({ theme }) => theme.COLORS.WHITE_200}
+    color: ${({ theme }) => theme.COLORS.WHITE_200};
   }
 
   .container button {
     background: none;
     border: none;
-    color: ${({ theme }) => theme.COLORS.GRAY_300}
+    color: ${({ theme }) => theme.COLORS.GRAY_300};
   }
 `;

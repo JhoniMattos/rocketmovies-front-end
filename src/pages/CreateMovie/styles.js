@@ -41,12 +41,14 @@ export const Form = styled.form`
 
   .back {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 4px;
-
+    
     margin-bottom: 24px;
     color: ${({ theme }) => theme.COLORS.PINK};
+  }
+
+  .back svg {
+    font-size: 20px;
+    margin-right: 8px;
   }
 
   a {

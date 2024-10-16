@@ -16,7 +16,8 @@ export const Container = styled.div`
 
     svg {
       color: ${({ theme }) => theme.COLORS.PINK};
-      font-size: 24px;
+      font-size: 20px;
+      margin-right: 8px;
     }
 
     a {

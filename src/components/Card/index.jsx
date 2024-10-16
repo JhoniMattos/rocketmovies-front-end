@@ -11,7 +11,8 @@ export function Card({ data, ...rest }) {
         <Stars rating={data.rating} />
       </div>
 
-      <p>{data.description}</p>
+      <p>{data.description.length > 400 ? `${data.description.slice(0, 400)}...` : data.description}</p>
+
 
       {data.tags && (
         <footer>
