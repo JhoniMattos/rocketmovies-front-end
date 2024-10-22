@@ -48,7 +48,7 @@ export const Form = styled.form`
 
   .back svg {
     font-size: 20px;
-    margin-right: 8px;
+    margin-right: 4px;
   }
 
   a {

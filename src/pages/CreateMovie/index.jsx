@@ -10,14 +10,14 @@ import { Input } from "../../components/Input";
 import { Textarea } from "../../components/Textarea";
 import { NewItem } from "../../components/NewItem";
 import { Section } from "../../components/Section";
-import { Button } from "../../components/Button"
+import { Button } from "../../components/Button";
 
 import { api } from '../../services/api';
 
 export function CreateMovie() {
   const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [rating, setRating] = useState("");
+  const [observation, setObservation] = useState("");
+  const [rating, setRating] = useState(0);
 
   const [tags, setTags] = useState([]);
   const [newTag, setNewTag] = useState("");
@@ -34,10 +34,18 @@ export function CreateMovie() {
   }
 
   async function handleNewMovie() {
+    if(!title) {
+      return alert("Digite o título da filme!")
+    }
+
+    if(newTag) {
+      return alert("Você precisa clicar em adicionar a tag, para prosseguir ou deixe vazio")
+    }
+
     await api.post("/movies", {
       title,
       rating,
-      description,
+      description: observation,
       tags
     });
 
@@ -53,8 +61,8 @@ export function CreateMovie() {
         <Form>
           <header>
             <div className="back">
-            
-            <Link to="/"><FiArrowLeft />Voltar</Link>
+            <FiArrowLeft />
+            <Link to="/">Voltar</Link>
             </div>
             <h1>Novo filme</h1>
           </header>
@@ -71,7 +79,7 @@ export function CreateMovie() {
           </div>
           <Textarea 
             placeholder="Obervações"
-            onChange={e => setDescription(e.target.value)}
+            onChange={e => setObservation(e.target.value)}
           />
 
           <Section title="Marcadores" >
