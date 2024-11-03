@@ -23,7 +23,7 @@ export function Header({ search, setSearch }) {
           onChange={(e) => setSearch(e.target.value)}  
         />
         <div className="log">
-          <Link to="/profile">Jhoni Mattos</Link>
+          <Link to="/profile">{user.name}</Link>
           <button onClick={signOut}>
             sair
           </button>
