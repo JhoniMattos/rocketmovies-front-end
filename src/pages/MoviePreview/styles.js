@@ -45,6 +45,10 @@ export const Content = styled.div`
     gap: 8px;
   }
 
+  svg {
+    color: ${({ theme }) => theme.COLORS.PINK};
+  }
+
 
   a { 
     display: flex;

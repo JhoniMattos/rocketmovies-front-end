@@ -16,8 +16,8 @@ import { api } from '../../services/api';
 
 export function CreateMovie() {
   const [title, setTitle] = useState("");
-  const [observation, setObservation] = useState("");
-  const [rating, setRating] = useState(0);
+  const [description, setDescription] = useState("");
+  const [rating, setRating] = useState("");
 
   const [tags, setTags] = useState([]);
   const [newTag, setNewTag] = useState("");
@@ -45,12 +45,12 @@ export function CreateMovie() {
     await api.post("/movies", {
       title,
       rating,
-      description: observation,
+      description,
       tags
     });
 
     alert("Filme criado com sucesso!");
-    navigate("/")
+    navigate("-1")
   }
 
   return (
@@ -74,12 +74,16 @@ export function CreateMovie() {
           />
           <Input 
             placeholder="Sua nota (de 0 a 5)"
+            type="number"
+            min="0"
+            max="5"
+            value={rating}
             onChange={e => setRating(e.target.value)}
           />
           </div>
           <Textarea 
             placeholder="Obervações"
-            onChange={e => setObservation(e.target.value)}
+            onChange={e => setDescription(e.target.value)}
           />
 
           <Section title="Marcadores" >

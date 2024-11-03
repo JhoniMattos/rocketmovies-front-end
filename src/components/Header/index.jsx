@@ -1,7 +1,7 @@
 import { Container, Profile } from "./styles";
 import { Link } from 'react-router-dom';
 
-import {useAuth } from '../../Hooks/auth';
+import {useAuth } from '../../hooks/auth';
 import { api } from '../../services/api';
 
 import { Input } from "../Input";
